@@ -18,7 +18,7 @@
                   <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
                     <input id="name" type="text" name="name"
-                    class="appearance-none border border-gray-300 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-blue-500" placeholder="Enter post title">
+                    class="appearance-none border border-gray-300 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:border-blue-500">
                   </div>
                       @error('name')
                         <div class="text-sm text-red-600">{{ $message }}</div>
@@ -44,7 +44,7 @@
                   <div class="sm:col-span-6 pt-5 mb-4">
                     <label for="dscription" class="block text-gray-700 font-bold mb-2">Description</label>
                     <textarea id="description" name="description"
-                    class="appearance-none border border-gray-300 rounded w-full py-4 px-6 leading-tight focus:outline-none focus:border-blue-500" placeholder="Enter post content"></textarea>
+                    class="appearance-none border border-gray-300 rounded w-full py-4 px-6 leading-tight focus:outline-none focus:border-blue-500"></textarea>
                   </div>
                       @error('description')
                         <div class="text-sm text-red-600">{{ $message }}</div>

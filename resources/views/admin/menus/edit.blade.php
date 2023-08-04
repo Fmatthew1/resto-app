@@ -13,7 +13,7 @@
           
            <div class="m-2 p-2 bg-slate-100 rounded">
             <div class="max-w-md mx-auto">
-                <form method="POST" action="{{ route('admin.menus.update', $menu->id) }}" enctype="multipart/formdata">
+                <form method="POST" action="{{ route('admin.menus.update', $menu->id) }}" enctype="multipart/form-data">
                   @csrf
                   @method('PUT')
                   <div class="mb-4">
@@ -47,7 +47,7 @@
                       @enderror
                   <div class="sm:col-span-6 pt-5 mb-4">
                     <label for="dscription" class="block text-gray-700 font-bold mb-2">Description</label>
-                    <textarea id="description" class="appearance-none border border-gray-300 rounded w-full py-4 px-6 leading-tight focus:outline-none focus:border-blue-500" placeholder="Enter description">
+                    <textarea id="description" class="appearance-none border border-gray-300 rounded w-full py-4 px-6 leading-tight focus:outline-none focus:border-blue-500">
                       {{ $menu->description }}
                     </textarea>
                   </div>
@@ -59,7 +59,7 @@
                     <div class="mt-1">
                       <select id="categories" name="categories[]" class="multi-select block w-full mt-1" multiple>
                         @foreach ($categories as $category)
-                          <option value="{{ $category->id }}" @selected($menu->categories->contains($category))>{{ $categories->name }}</option>
+                          <option value="{{ $category->id }}" @selected($menu->categories->contains($category))>{{ $category->name }}</option>
                         @endforeach
                       </select>
                     </div>
