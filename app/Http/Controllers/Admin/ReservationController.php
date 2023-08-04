@@ -42,7 +42,7 @@ class ReservationController extends Controller
         $request_date = carbon::parse($request->res_date);
         foreach ($table->reservations as $res) {
             if($res->res_date->format('Y-m-d') == $request_date->format('Y-m-d')){
-                return back()->with('warning', 'This table is reserved for this date.');
+                return back()->with('warning', 'This table is reserved for this date.');     
             }
         }
         Reservation::create($request->validated());
